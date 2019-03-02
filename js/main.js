@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	//RegExp
 	const formatRegExp = /['"]/g;
-	const emailRegExp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i; // got from stackoverflow. thanks guys :)
+	const emailRegExp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i; const secretMessage = "Congratulations! You have successfully manifested Yourself. Don't know really why, but that's ok :)";
+	// email regexp credit goes to stackoverflow community. thanks guys :) 
 //////end of block///////
 
 // adds datepicker. P.S. this is the only place jQuery selector is used, 
@@ -146,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		}
 		displayErros(userErrors);
-		errorCount == 0 ? alert("Congratulations! You have successfully manifested Yourself") : undefined; 
+		errorCount == 0 ? alert(secretMessage) : undefined; 
 		changeBorder();
 	}
 //////end of block///////
