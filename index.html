@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/countrypicker.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/mama.js"></script>
 </head>
 
 <body>
@@ -24,14 +24,14 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="form-group">
-							<label for="firstName">First Name</label>
+							<label for="firstName">First Name *</label>
 							<input type="text" class="form-control" id="firstName" data-validation="firstName" placeholder="">
 						</div>
 						<div class="alert alert-danger" id="firstNameError" role="alert"></div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
-							<label for="lastName">Last Name</label>
+							<label for="lastName">Last Name *</label>
 							<input type="text" class="form-control" id="lastName" data-validation="lastName" placeholder="">
 						</div>
 						<div class="alert alert-danger" id="lastNameError" role="alert"></div>
@@ -40,25 +40,28 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="form-group">
-							<label for="birthday">Your date of birth</label>
+							<label for="birthday">Your date of birth *</label>
 							<input type="text" class="form-control" id="birthday" data-validation="birthday" placeholder="">
 						</div>
 						<div class="alert alert-danger" id="birthdayError" role="alert"></div>
 					</div>
 					<div class="col-md-4 gender-down text-center">
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="radios" id="gender" data-validation="gender" value="">
-							<label class="form-check-label" for="gender1">Male</label>
-						</div>
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="radios" id="gender2" value="">
-							<label class="form-check-label" for="gender2">Female</label>
+						<div class="form-group">
+							<label>Select your gender *</label>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="radios" id="gender" data-validation="gender" value="">
+								<label class="form-check-label" for="gender1">Male</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="radios" id="gender2" value="">
+								<label class="form-check-label" for="gender2">Female</label>
+							</div>
 						</div>
 						<div class="alert alert-danger" id="genderError" role="alert"></div>
 					</div>
 					<div class="col-md-4">
 						<div class="form-group">
-							<label for="country">Country</label>
+							<label for="country">Country *</label>
 		<!-- 						  use jQuery plugin countrypicker by Saganic(https://github.com/Saganic/country-picker) -->
 							<select class="form-control countrypicker" id="country" data-validation="country" data-default=""></select>
 						</div>
@@ -68,21 +71,21 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="form-group">
-							<label for="email">Email address</label>
+							<label for="email">Email address *</label>
 							<input type="email" class="form-control" id="email" data-validation="email" placeholder="">
 						</div>
 						<div class="alert alert-danger" id="emailError" role="alert"></div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
-							<label for="password">Password</label>
+							<label for="password">Password *</label>
 							<input type="password" class="form-control" id="password" data-validation="password" placeholder="">
 						</div>
 						<div class="alert alert-danger" id="passwordError" role="alert"></div>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="address">Address</label>
+					<label for="address">Address *</label>
 					<input type="text" class="form-control" id="address" data-validation="address" placeholder="">
 				</div>
 				<div class="alert alert-danger" id="addressError" role="alert"></div>
