@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		return userErrors;
 	}
 
-	// removes red border when user filled the field
+	// removes red border when user filled the field. Doesn't work with birthday field (because of datepicker). Future fix needed.
 	function changeBorder() {
 		let elements = document.querySelectorAll(".errors");
 		elements.forEach(function(elem) {
