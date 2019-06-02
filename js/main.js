@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			toggleBulb(id2);
 		}
 		if (winwin()) {
-			toggleBulb(3);
+			showReward();
 		}
 	}
 	function changeColor2() {
