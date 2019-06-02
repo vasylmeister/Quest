@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			toggleBulb(id2);
 		}
 		if (winwin()) {
-			showReward();
+			toggleBulb(3);
 		}
 	}
 	function changeColor2() {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			toggleBulb(id2);
 		}
 		if (winwin()) {
-			showReward();
+			toggleBulb(0);
 		}
 	}	
 	function changeColor3() {
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			toggleBulb(id2);
 		}
 		if (winwin()) {
-			showReward();
+			toggleBulb(5);
 		}
 	}
 
