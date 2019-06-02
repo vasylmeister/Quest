@@ -9,12 +9,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	function rubay() {
-		let elem = document.getElementById("main-cont")
+		let elem = document.getElementById("main-cont");
+		let elem2 = document.getElementById("rub");
 		if (elem.className == "container-fluid white-container") {
 			elem.className = "container-fluid black-container"
+			elem2.className = "rub-off"
 		}
 		else {
 			elem.className = "container-fluid white-container"
+			elem2.className = "rub-on"
 		}
 	}
 
@@ -24,23 +27,29 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 	function turnOn(id) {
-		document.getElementById("b"+id).className = "b"+id+"-on";
+		document.getElementById("b"+id).className = "b-on";
+		if (winwin()) {
+			showReward();
+			return false
+		} else {
+			return true
+		}
 	}
 
 	function toggleBulb(id) {
 		let elem = document.getElementById("b"+id);
-		console.log(elem);
-		if(elem.className == "b"+id+"-off") {
-		   elem.className = "b"+id+"-on";
+		if(elem.className == "b-off") {
+		   elem.className = "b-on";
 		} else {
-		   elem.className = "b"+id+"-off";
+		   elem.className = "b-off";
 		}	
 	}
 // validates user input on submit
 	function changeColor1() {
 		if (win()) {
-			turnOn(1);
-			turnOn(2);
+			if (turnOn(1)) {
+				turnOn(2);
+			}
 			return
 		}
 		let id1 = Math.floor(Math.random() * 6);
@@ -49,12 +58,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			id2 = Math.floor(Math.random() * 6);
 		}
 		toggleBulb(id1);
-		toggleBulb(id2);
+		if (id2 <= 3) {
+			toggleBulb(id2);
+		}
+		if (winwin()) {
+			showReward();
+		}
 	}
 	function changeColor2() {
 		if (win()) {
-			turnOn(3);
-			turnOn(4);
+			if (turnOn(3)) {
+				turnOn(4);
+			}
 /*			if (winwin) {
 				winner banner
 				return
@@ -67,12 +82,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			id2 = Math.floor(Math.random() * 6);
 		}
 		toggleBulb(id1);
-		toggleBulb(id2);
+		if (id2 <= 3) {
+			toggleBulb(id2);
+		}
+		if (winwin()) {
+			showReward();
+		}
 	}	
 	function changeColor3() {
 		if (win()) {
-			turnOn(5);
-			turnOn(0);
+			if (turnOn(5)) {
+				turnOn(0);
+			}
 			return
 		}
 		let id1 = Math.floor(Math.random() * 6);
@@ -81,8 +102,30 @@ document.addEventListener("DOMContentLoaded", function() {
 			id2 = Math.floor(Math.random() * 6);
 		}
 		toggleBulb(id1);
-		toggleBulb(id2);
+		if (id2 <= 3) {
+			toggleBulb(id2);
+		}
+		if (winwin()) {
+			showReward();
+		}
 	}
+
+	function winwin() {
+		let elem = document.getElementsByClassName("b-on");
+		console.log(elem.length)
+		if (elem.length == 6) {
+			return true
+		}
+	}
+
+	function showReward() {
+		alert("Ура! Ви розв'язали задачу. Перейдіть до наступної сторінки.");
+		document.getElementById("final").className += " show";
+	}
+
+
+
+
 //////end of block///////
 });
 
