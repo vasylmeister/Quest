@@ -62,7 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			toggleBulb(id2);
 		}
 		if (winwin()) {
-			showReward();
+			if (Math.floor(Math.random() * 10) <= 2) {
+				showReward();
+			}
 		}
 	}
 	function changeColor2() {
@@ -70,10 +72,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (turnOn(3)) {
 				turnOn(4);
 			}
-/*			if (winwin) {
-				winner banner
-				return
-			}*/
 			return
 		}
 		let id1 = Math.floor(Math.random() * 6);

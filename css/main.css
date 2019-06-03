@@ -30,39 +30,11 @@
 .b-on {
 	background-image: url(images/bulb2.png);
 }
-.b2-on {
-	background-image: url(images/bulb2.png);
-}
-.b3-on {
-	background-image: url(images/bulb2.png);
-}
-.b4-on {
-	background-image: url(images/bulb2.png);
-}
-.b5-on {
-	background-image: url(images/bulb2.png);
-}
-.b0-on {
-	background-image: url(images/bulb2.png);
-}
+
 .b-off {
 	background-image: url(images/bulb1.png);
 }
-.b2-off {
-	background-image: url(images/bulb1.png);
-}
-.b3-off {
-	background-image: url(images/bulb1.png);
-}
-.b4-off {
-	background-image: url(images/bulb1.png);
-}
-.b5-off {
-	background-image: url(images/bulb1.png);
-}
-.b0-off {
-	background-image: url(images/bulb1.png);
-}
+
 
 .button-cont {
 	width: 100%;
